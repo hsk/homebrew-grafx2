@@ -1,16 +1,26 @@
-# Hsk Grafx2
+# hsk/grafx2
 
-## How do I install these formulae?
+A [Homebrew](https://brew.sh) tap for [GrafX2](https://gitlab.com/GrafX2/grafx2), the 256-color pixel art painting program.
 
-`brew install hsk/grafx2/<formula>`
+Homebrew's own `grafx2` cask ships upstream's prebuilt app, which has been
+disabled since 2026-09-01 because it fails the macOS Gatekeeper check. This
+tap instead builds GrafX2 natively from source against Homebrew-provided
+SDL2, Lua, libpng, etc., using the "homebrew" build target that GrafX2
+added for modern macOS. That target isn't in any tagged release yet
+(latest tag is `v2.9`, from April 2024), so the formula is pinned to the
+commit on `master` that introduced it.
 
-Or `brew tap hsk/grafx2` and then `brew install <formula>`.
+## Install
 
-Or, in a `brew bundle` `Brewfile`:
+```
+brew install hsk/grafx2/grafx2
+```
 
-```ruby
-tap "hsk/grafx2"
-brew "<formula>"
+or
+
+```
+brew tap hsk/grafx2
+brew install grafx2
 ```
 
 ## Documentation
